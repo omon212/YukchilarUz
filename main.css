@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Anek Gujarati";
+}
+
+.container {
+    max-width: 1267px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 326px;
+    height: 91px;
+}
+
+.header {
+    display: flex;
+    padding: 31px 81px;
+    align-items: center;
+}
+
+.instagram-icon {
+    font-size: 50px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.telegram-icon {
+    font-size: 50px;
+    background: linear-gradient(45deg, #74C0FC, #408AD9, #0074A3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.contact-phone {
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 80px;
+}
+
+/* Hero section start */
+.hero {
+    background-image: url(./img/bg-img.jpg);
+    width: 100%;
+    height: 725px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-content {
+    position: relative;
+    top: 124px;
+    left: 272px;
+    width: 984px;
+    height: 373px;
+    padding: 54px 28px;
+    display: flex;
+}
+
+.hero-text {
+    width: 600px;
+    height: 275px;
+}
+
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service-box {
+    display: flex;
+    font-size: 20px;
+    margin: 10px;
+    width: 280px;
+    height: 75px;
+    margin-top: 40px;
+}
+
+.service-box img {
+    width: 73px;
+    height: 73px;
+    margin-right: 20px;
+}
+
+.hero-title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.hero-form {
+    width: 235px;
+    height: 300px;
+    margin-left: 50px;
+    background-color: #282938;
+    color: white;
+    padding: 30px 15px;
+    border-radius: 40px;
+}
+
+.hero-form p {
+    font-size: 17px;
+    text-align: center;
+    color: white;
+}
+
+input {
+    width: 197px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.form-button {
+    background-color: #3E4B68;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 13px 0px;
+}
+
+/* Переключатель */
+.language-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.language-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2E3649;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "UZ";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #3E4B68;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    transition: .4s;
+    color: white;
+}
+
+input:checked+.slider {
+    background-color: #40444e;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+    content: "RU";
+}
+
+/*  */
+.hero-form {}
+
+.form-description {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#contactForm input,
+#contactForm button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contactForm button {
+    background-color: #3E4B68;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #0056b3;
+}
+
+.show-form {
+    display: block !important;
+}
+
+
+
+.btn {
+    display: none;
+}
+
+/* Hero section end */
+
+/* Footer for mobile start */
+.mobile-footer {
+    display: none;
+    color: rgb(0, 0, 0);
+    padding: 20px 0;
+}
+
+.mobile-footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mobile-footer .logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.mobile-footer .social-media-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 225px;
+}
+
+.mobile-footer .contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* Media iphone start */
+
+@media screen and (max-width: 431px) {
+    .header {
+        display: flex;
+        padding: 30px 14px;
+        align-items: center;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .container {
+        max-width: 390px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .contact-phone {
+        display: block;
+        margin: 0;
+    }
+
+    .contact-logo {
+        display: block;
+    }
+
+    .hero {
+        background-image: none;
+    }
+
+    .hero-content {
+        position: relative;
+        top: 0;
+        left: -48px;
+        width: 430px;
+        height: 600px;
+        padding: 54px 28px;
+        display: flex;
+    }
+
+    .services-wrapper {
+        display: block;
+    }
+
+    .service-box {
+        margin-left: 50px;
+    }
+
+    .hero-form {
+        display: none;
+    }
+
+    .logo {
+        width: 191px;
+        height: 62px;
+    }
+
+    .mobile-footer {
+        display: block;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .btn {
+        display: block;
+        margin: 50px auto;
+        background-color: #3E4B68;
+        color: white;
+        padding: 14px 20px;
+        border-radius: 7px;
+        border: none;
+    }
+
+    .hero-form {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 42%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-form p {
+        color: black;
+    }
+}
+
+/* Media iphone end */
