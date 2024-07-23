@@ -10,6 +10,7 @@ document.getElementById('language-switch').addEventListener('change', function (
         document.getElementById('form-text').textContent = 'Заполните форму, чтобы узнать стоимость доставки';
         document.getElementById('name').placeholder = 'Имя';
         document.getElementById('phone').placeholder = 'Номер телефона';
+        document.querySelector('.btn').textContent = 'Связаться с нами';
         document.querySelector('.form-button').textContent = 'Отправить';
     } else {
         document.getElementById('hero-title').textContent = 'O’ZBEKISTON bo’ylab yuk tashish xizmati';
@@ -20,6 +21,7 @@ document.getElementById('language-switch').addEventListener('change', function (
         document.getElementById('form-text').textContent = 'Yuk tashish xarajatlarini bepul bilish uchun formani to’ldiring';
         document.getElementById('name').placeholder = 'Ism';
         document.getElementById('phone').placeholder = 'Telefon raqami';
+        document.querySelector('.btn').textContent = 'Biz bilan boglanish';
         document.querySelector('.form-button').textContent = 'Yuborish';
     }
 });
