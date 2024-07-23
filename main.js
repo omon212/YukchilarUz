@@ -8,6 +8,8 @@ document.getElementById('language-switch').addEventListener('change', function (
         document.getElementById('service3').textContent = 'Доставка в течение 1 часа';
         document.getElementById('service4').textContent = '20 летний успешный опыт';
         document.getElementById('form-text').textContent = 'Заполните форму, чтобы узнать стоимость доставки';
+        document.getElementById('name').placeholder = 'Имя';
+        document.getElementById('phone').placeholder = 'Номер телефона';
         document.querySelector('.form-button').textContent = 'Отправить';
     } else {
         document.getElementById('hero-title').textContent = 'O’ZBEKISTON bo’ylab yuk tashish xizmati';
@@ -16,6 +18,8 @@ document.getElementById('language-switch').addEventListener('change', function (
         document.getElementById('service3').textContent = '1 soat yuk mashina qoyib beramiz';
         document.getElementById('service4').textContent = '20 yillik muvaffaqiyatli tajriba';
         document.getElementById('form-text').textContent = 'Yuk tashish xarajatlarini bepul bilish uchun formani to’ldiring';
+        document.getElementById('name').placeholder = 'Ism';
+        document.getElementById('phone').placeholder = 'Telefon raqami';
         document.querySelector('.form-button').textContent = 'Yuborish';
     }
 });
@@ -28,8 +32,8 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     const phone = document.getElementById('phone').value;
 
     // Телеграм токен и ID чата
-    const token = 'YOUR_TELEGRAM_BOT_TOKEN'; // Замените на ваш токен бота
-    const chatId = 'YOUR_CHAT_ID'; // Замените на ваш ID чата
+    const token = '7188094125:AAGEIipf6Jhh0igbRiydlD7EliQ3WQYoyR8'; // Замените на ваш токен бота
+    const chatId = '6457971132'; // Замените на ваш ID чата
 
     const message = `Имя: ${name}\nТелефон: ${phone}`;
 
@@ -50,9 +54,9 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         .then(response => response.json())
         .then(data => {
             if (data.ok) {
-                alert('Сообщение отправлено успешно!');
+                console.log('Сообщение отправлено успешно!');
             } else {
-                alert('Ошибка отправки сообщения.');
+                console.log('Ошибка отправки сообщения.');
             }
         })
         .catch(error => {
@@ -60,20 +64,21 @@ document.getElementById('contactForm').addEventListener('submit', function (even
             alert('Ошибка отправки сообщения.');
         });
 });
+
+// Показать форму
 document.addEventListener("DOMContentLoaded", function() {
     var btn = document.querySelector(".btn");
     var form = document.querySelector(".hero-form");
-  
+
     btn.addEventListener("click", function(event) {
-      event.preventDefault();
-      form.classList.toggle("show-form");
+        event.preventDefault();
+        form.classList.toggle("show-form");
     });
-  
+
     // Закрывать форму при клике вне ее
     document.addEventListener("click", function(event) {
-      if (!form.contains(event.target) && !btn.contains(event.target)) {
-        form.classList.remove("show-form");
-      }
+        if (!form.contains(event.target) && !btn.contains(event.target)) {
+            form.classList.remove("show-form");
+        }
     });
-  });
-  
+});
